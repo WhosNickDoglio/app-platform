@@ -17,6 +17,25 @@
 ### Other Notes & Contributions
 
 
+## [0.0.16] - 2026-07-02
+
+**IMPORTANT:** Ownership of this project was transferred from `amzn/app-platform` to `vRallev/app-platform`.
+
+### Added
+
+- Add `robot-compose-multiplatform-public` automatically to Kotlin Multiplatform `:app` test source sets when Compose UI is enabled, so Compose robot tests can run without a manual dependency.
+
+### Changed
+
+- Upgrade Metro to `1.3.0`.
+- Use JDK 25 for the repository build and CI toolchain while keeping published module JVM compatibility unchanged.
+- Update documentation, publishing metadata, and generated site links for the repository move to `vRallev/app-platform`.
+
+### Fixed
+
+- Make the App Platform Gradle plugin work with AGP built-in Kotlin Android application and library modules that do not apply `org.jetbrains.kotlin.android`, including Metro dependencies, module-structure dependencies, and compiler-plugin classpaths.
+- Treat `:apps:`, `:app-*`, and `:apps-*` project path groups as app modules so module-structure checks allow those app boundaries to depend on `:impl` modules.
+
 ## [0.0.15] - 2026-06-15
 
 ### Added
@@ -219,7 +238,8 @@
 
 - Initial release.
 
-[Unreleased]: https://github.com/vRallev/app-platform/compare/0.0.15...HEAD
+[Unreleased]: https://github.com/vRallev/app-platform/compare/0.0.16...HEAD
+[0.0.16]: https://github.com/vRallev/app-platform/compare/0.0.16
 [0.0.15]: https://github.com/vRallev/app-platform/compare/0.0.15
 [0.0.14]: https://github.com/vRallev/app-platform/compare/0.0.14
 [0.0.13]: https://github.com/vRallev/app-platform/compare/0.0.13
